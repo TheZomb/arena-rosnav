@@ -31,6 +31,8 @@ class BaseMapGenerator(ABC):
         Returns:
             np.ndarray: 2D numpy array of the occupancy grid map with values in [0, 1].
                 In shape (height, width).
+            dict: returns dict {obstacles: [], occupancy: np.ndarray} where obstacles ist an array of Obstacles 
+                and occupancy an 2D array with occupancy values in [0,1]
         """
         self.update_params(*self.retrieve_params())
 
